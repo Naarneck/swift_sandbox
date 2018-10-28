@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="rush01" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="i.e. San Francisco" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Yyx-4o-ESA">
+                                <rect key="frame" x="16" y="28" width="249" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Destination address" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="f6F-H4-kao">
+                                <rect key="frame" x="16" y="70" width="343" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DHu-t4-Jl6">
+                                <rect key="frame" x="235" y="28" width="30" height="30"/>
+                                <state key="normal" title="Go"/>
+                                <connections>
+                                    <action selector="searchButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="evL-LP-pay"/>
+                                </connections>
+                            </button>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="cJH-Kt-nD5">
+                                <rect key="frame" x="120" y="619" width="135" height="29"/>
+                                <segments>
+                                    <segment title="Standart"/>
+                                    <segment title="Satellite"/>
+                                    <segment title="Dark"/>
+                                </segments>
+                                <connections>
+                                    <action selector="mapStyle:" destination="BYZ-38-t0r" eventType="valueChanged" id="j4B-vg-GbF"/>
+                                </connections>
+                            </segmentedControl>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZMk-Sd-nK5">
+                                <rect key="frame" x="329" y="615" width="30" height="30"/>
+                                <state key="normal" image="define_location"/>
+                                <connections>
+                                    <action selector="showUser:" destination="BYZ-38-t0r" eventType="touchUpInside" id="xku-vX-TRj"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jnr-yj-lwF">
+                                <rect key="frame" x="260" y="70" width="97" height="30"/>
+                                <state key="normal" title="Get directions"/>
+                                <connections>
+                                    <action selector="goRoute:" destination="BYZ-38-t0r" eventType="touchUpInside" id="wtR-UY-cNL"/>
+                                </connections>
+                            </button>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="zfX-bg-sOv">
+                                <rect key="frame" x="270" y="28" width="51" height="31"/>
+                                <connections>
+                                    <action selector="swwitch:" destination="BYZ-38-t0r" eventType="valueChanged" id="Dbx-tu-VEW"/>
+                                </connections>
+                            </switch>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="zfX-bg-sOv" firstAttribute="leading" secondItem="Yyx-4o-ESA" secondAttribute="trailing" constant="5" id="AvJ-Bx-C3d"/>
+                            <constraint firstItem="f6F-H4-kao" firstAttribute="top" secondItem="Yyx-4o-ESA" secondAttribute="bottom" constant="12" id="Cxd-7G-EC6"/>
+                            <constraint firstItem="DHu-t4-Jl6" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="8" id="DLa-7x-SKC"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Yyx-4o-ESA" secondAttribute="trailing" constant="110" id="DaW-FP-QvC"/>
+                            <constraint firstItem="cJH-Kt-nD5" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="GeH-LU-Kzw"/>
+                            <constraint firstItem="f6F-H4-kao" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="HOD-Oc-flU"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="jnr-yj-lwF" secondAttribute="trailing" constant="18" id="HZG-5b-Xql"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="ZMk-Sd-nK5" secondAttribute="bottom" constant="22" id="Iw8-3R-9Tg"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="DHu-t4-Jl6" secondAttribute="trailing" constant="110" id="Mgf-Dp-Qog"/>
+                            <constraint firstItem="zfX-bg-sOv" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="8" id="PN4-gf-dVG"/>
+                            <constraint firstItem="Yyx-4o-ESA" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="QvB-ND-p5c"/>
+                            <constraint firstItem="jnr-yj-lwF" firstAttribute="top" secondItem="Yyx-4o-ESA" secondAttribute="bottom" constant="12" id="UFX-4V-t6f"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="cJH-Kt-nD5" secondAttribute="bottom" constant="22" id="dvb-35-fQX"/>
+                            <constraint firstItem="Yyx-4o-ESA" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="8" id="dwB-wB-iYK"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="ZMk-Sd-nK5" secondAttribute="trailing" constant="16" id="sMs-dT-OTS"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="f6F-H4-kao" secondAttribute="trailing" constant="16" id="u1i-tA-N4a"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="searchButtonOutlet" destination="DHu-t4-Jl6" id="nYN-wX-PdV"/>
+                        <outlet property="searchDestField" destination="f6F-H4-kao" id="X2A-l2-i2C"/>
+                        <outlet property="searchField" destination="Yyx-4o-ESA" id="7OQ-7D-O92"/>
+                        <outlet property="switchLoc" destination="zfX-bg-sOv" id="Luv-QI-Hn5"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="117.59999999999999" y="117.39130434782609"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="define_location" width="30" height="30"/>
+    </resources>
+</document>
